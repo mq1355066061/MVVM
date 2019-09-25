@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- View -->
+    <h1>{{ name }}</h1>
+    <h1>{{ age }}</h1>
+    <span v-text="name"></span>
+    <div>
+      <input type="text" v-model="name">
+    </div>
+    <input type="text" v-model="age">
+  </div>
+  <!-- <script src="./node_modules/vue/dist/vue.js"></script> -->
+  <script src="./MVVM/eventEmitter.js"></script>
+  <script src="./MVVM/compiler.js"></script>
+  <script src="./MVVM/observer.js"></script>
+  <script src="./MVVM/vue.js"></script>
+  <script>
+    // ViewModel
+    const vm = new Vue({
+      el: '#app',
+      // Model
+      data: {
+        name: 'zs',
+        age: 18
+      }
+    })
+  </script>
+</body>
+</html>
